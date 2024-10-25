@@ -17,7 +17,7 @@ else
 fi
 
 # Modify /etc/passwd to set root's shell to /sbin/nologin
-sed -i 's|^root:.*:/bin/bash|root:x:0:0:root:/root:/sbin/nologin|' /etc/passwd
+sed -i 's|^root:.*|root:x:0:0:root:/root:/usr/sbin/nologin|' /etc/passwd
 
 # Check if the modification was successful
 if grep -q 'root:x:0:0:root:/root:/sbin/nologin' /etc/passwd; then

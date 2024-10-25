@@ -77,6 +77,10 @@ comment_out_setting() {
 
 # Applying the requested security settings
 
+
+# Disable root login
+uncomment_or_update_setting "PermitRootLogin" "no" "$SSHD_CONFIG"
+
 # Enable public key authentication
 uncomment_or_update_setting "PubkeyAuthentication" "yes" "$SSHD_CONFIG"
 
